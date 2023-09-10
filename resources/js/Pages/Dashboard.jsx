@@ -80,4 +80,6 @@ const testData = [
   {
     "id": 3,
     "name": "Beaded Necklace",
-    "description": "This beaded necklace is handmade and
+    "description": "This beaded necklace is handmade and"
+  }
+];
