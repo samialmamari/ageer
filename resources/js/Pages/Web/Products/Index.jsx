@@ -167,8 +167,35 @@ setHouseMaid(filteredProducts);
     return (
         <div className="flex flex-col min-h-screen">
           <Header />
+          
             <div className="flex flex-row flex-1">
-                <ul className="menu bg-base-200 w-56 rounded-box">
+                
+            <div className="drawer lg:drawer-open">
+  
+  <input id="my-drawer-2" type="checkbox" className="drawer-toggle" />
+  
+  <div className="drawer-content flex flex-col items-center justify-center">
+
+  <label htmlFor="my-drawer-2" className="btn btn-primary bg-[#8551d4] drawer-button lg:hidden">للبحث اضغط هنا</label>
+  <section className="text-gray-600 body-font">
+                    <div className="container px-5 py-24 mx-auto">
+                        <div className="flex flex-wrap space-x-3">
+                            {houseMaid &&
+                                houseMaid.map((product) => (
+                                    <Product
+                                        key={product.id}
+                                        product={product}
+                                    />
+                                ))}
+                        </div>
+                    </div>
+                </section>
+
+  </div> 
+  <div className="drawer-side">
+    <label htmlFor="my-drawer-2" className="drawer-overlay"></label>
+                
+    <ul className="menu p-4 w-80 min-h-full bg-base-200 text-base-content">
                     {/* <li><a>Item 1</a></li> */}
                     <li>
                         <details open>
@@ -351,20 +378,9 @@ setHouseMaid(filteredProducts);
                     </li>
                     
                 </ul>
-            
-                <section className="text-gray-600 body-font">
-                    <div className="container px-5 py-24 mx-auto">
-                        <div className="flex flex-wrap space-x-3">
-                            {houseMaid &&
-                                houseMaid.map((product) => (
-                                    <Product
-                                        key={product.id}
-                                        product={product}
-                                    />
-                                ))}
-                        </div>
-                    </div>
-                </section>
+            </div>
+            </div>
+               
             </div>
         </div>
     );

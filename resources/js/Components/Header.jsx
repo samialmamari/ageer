@@ -7,15 +7,7 @@ export default function Header() {
     <header className="text-gray-600 body-font ">
                 <div className="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center">
                     <a className="flex title-font font-medium items-center text-gray-900 mb-4 md:mb-0" href="/">
-                        <svg
-                            xmlns="http://www.w3.org/2000/svg"
-                            fill="none"
-                            stroke="currentColor"
-                            className="w-10 h-10 text-white p-2 bg-indigo-500 rounded-full"
-                            viewBox="0 0 24 24"
-                        >
-                            <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"></path>
-                        </svg>
+                   <img src = "/storage/images/logo.png" alt="logo" className="w-20 h-20 text-white p-2 rounded-full" />
                         <span className="ml-3 text-xl">اجير</span>
                     </a>
                     <nav className="md:ml-auto md:mr-auto flex flex-wrap items-center text-base justify-center">
@@ -29,7 +21,7 @@ export default function Header() {
                             قائمة العاملات
                         </a>
                     </nav>
-                    {
+                    {/* {
                         <div className="sm:fixed sm:top-0 sm:right-0 p-6 text-right z-10">
                             {auth.user ? (
                                 <div className="flex items-center">
@@ -78,7 +70,7 @@ export default function Header() {
                                 </>
                             )}
                         </div>
-                    }
+                    } */}
                 </div>
             </header>
 
