@@ -15,7 +15,11 @@ function Aboutus() {
       
         .</p>
       <span class="inline-block h-1 w-10 rounded bg-indigo-500 mt-8 mb-6"></span>
-      <h2 class="text-gray-900 font-medium title-font tracking-wider text-sm"></h2>
+      <h1 class="text-gray-900 font-medium title-font tracking-wider text-sm">
+      منصة أجير
+تعنى المنصة بتسهيل الوصول إلى عاملات المنازل 
+حيث تقوم المنصة بجمع البيانات المتوفرة من مكاتب استقدام الأيدي العاملة على إن تصل البيانات بسهولة ويسر إلى المستفيد
+      </h1>
       <p class="text-gray-500"></p>
     </div>
   </div>

@@ -102,7 +102,7 @@ export default function Welcome({ auth, laravelVersion, phpVersion }) {
                     <div className="max-w-xl text-center ltr:sm:text-left rtl:sm:text-right">
                         <h1 className="text-3xl font-extrabold sm:text-5xl">
                             <strong className="block font-extrabold text-[#8e7d90]">
-                                اجير
+                                أجير
                             </strong>
                         </h1>
 {/* <div className="mask mask-squircle bg-slate-300"> */}

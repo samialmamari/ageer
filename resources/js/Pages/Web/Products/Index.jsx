@@ -34,7 +34,7 @@ function Index() {
    const religions = [
 
         {
-            id: 'muslim',
+            id: 'Muslim',
             name: "مسلمة",
         },
         {

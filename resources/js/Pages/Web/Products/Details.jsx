@@ -3,6 +3,9 @@ import Header from '@/Components/Header'
 import { Link, useForm, usePage } from "@inertiajs/react";
 function Details() {
   const {product, vendor, order, auth} = usePage().props
+  const [linkthispage, setLinkthispage] = React.useState(window.location.href);
+
+  // setLinkthispage(window.location.href);
   // let img = 'https://cdn.discordapp.com/attachments/1121901933377101824/1126606678373171320/sami.almamari_avtar_for_indian_girl__hijab_cartoon_215473b4-d1d3-45fd-8b53-ec950b664608.png'
   const { data, setData, processing, errors, post , DELETE} = useForm({
     id: product.id
@@ -146,20 +149,21 @@ null
         <div className="flex">
           <span className="title-font font-medium text-2xl text-gray-900">{ product.price} OMR</span>
         
-         { order ? ( order.status != 'pending' ? <button className="flex mr-auto text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded"
+         {/* { order ? ( order.status != 'pending' ? <a href= 'https://api.whatsapp.com/send?phone=96892797721&&text=sami' className="flex mr-auto text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded"
           onClick={handleClick}
-          >حجز </button>
+          >حجز </a>
           :
           <button className="flex mr-auto text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded"
           onClick={handleClickCancel}
           >الغاء الحجز </button>
-          ) : (
-            <button className="flex mr-auto text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded"
-            onClick={handleClick}
-            >حجز </button>
-          )
+          ) : ( */}
+            <a href={`https://api.whatsapp.com/send?phone=968${product.phone_number}&&text= I want to ask about this ${linkthispage} `} className="flex mr-auto text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded">
+              حجز
+            </a>
+           
+          {/* )
           }
-        
+         */}
           {/* <button className="rounded-full w-10 h-10 bg-gray-200 p-0 border-0 inline-flex items-center justify-center text-gray-500 ml-4">
             <svg fill="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" className="w-5 h-5" viewBox="0 0 24 24">
               <path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z"></path>
@@ -167,7 +171,10 @@ null
           </button> */}
         </div>
       </div>
+      {/* <figure> */}
       <img alt="ecommerce" className="lg:w-1/2 w-full lg:h-auto h-64 object-cover object-center rounded pr-9" src={`/storage/${product.image}`} />
+      {/* </figure> */}
+      
     </div>
   </div>
 </section>
